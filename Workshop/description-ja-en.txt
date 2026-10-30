@@ -1,0 +1,129 @@
+[h1]Tactile Paving (点字ブロック敷設)[/h1]
+
+[b]日本語[/b] / [b]English below[/b]
+
+[h2]■ 概要[/h2]
+道路の歩道の上に、点字ブロック（視覚障害者誘導用ブロック）を自由に敷設できるモッドです。UnifiedUI (UUI) のアイコンからツールを開き、歩道を2回クリックするだけで、歩道のカーブに沿ってブロックが並びます。街の歩道や駅前、横断歩道の手前などを、よりリアルに仕上げたい方におすすめです。
+
+[h2]■ 主な機能[/h2]
+[list]
+[*]2種類のブロック × 2色：線状ブロック（誘導用）と点状ブロック（警告用）、それぞれ黄色とグレー
+[*]1〜3列の幅（1列 = 300mm）
+[*]歩道のカーブに沿った自動配置
+[*]ノード機能：敷設済みの列の端から続きを敷設したり、列どうしをつないだりできます
+[*]右クリックでブロックを1枚ずつ削除
+[*]突起の陰影が出る立体的な見た目
+[*]日本語・英語の切り替え（オプション画面ですぐに反映）
+[*]敷設したブロックはセーブデータに保存
+[/list]
+
+[h2]■ 必要なもの[/h2]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2255219025]UnifiedUI (UUI)[/url]
+[/list]
+
+[h2]■ 使い方[/h2]
+[olist]
+[*]UUIのパネルにある点字ブロックのアイコンをクリックすると、ツールがONになり、画面左に設定パネルが表示されます。
+[*]設定パネルで、ブロックの種類と列数を選びます。
+[*]歩道の上を左クリックすると開始地点、もう一度左クリックすると終了地点になり、ブロックが敷設されます。
+[*]列の両端には水色の「ノード」が表示されます。ノードをクリックすると、そこから続きを敷設できます。線状ブロックの先に点状ブロックをつなぐときに便利です。
+[*]もう一度アイコンをクリックするとツールがOFFになります。
+[/olist]
+
+[b]操作一覧[/b]
+[list]
+[*]左クリック：開始地点・終了地点を決定
+[*]右クリック：敷設中はキャンセル／それ以外はカーソル下のブロックを1枚削除（削除される1枚は赤く表示）
+[*]Ctrl+Z：直前に敷設した列を取り消し
+[/list]
+
+[h2]■ 設定[/h2]
+ゲーム内の設定パネルと、オプション → MOD設定 のどちらからでも変更できます。
+[list]
+[*]言語：日本語／English（オプション画面）
+[*]ブロックの種類：線状・点状 × 黄色・グレー
+[*]列数：1〜3列
+[/list]
+種類と列数は、これから敷設するブロックに反映されます。
+
+[h2]■ よくある質問[/h2]
+[b]Q. アイコンが見つかりません[/b]
+A. UUIが有効か確認してください。UUIの丸いボタンが2つ重なっている場合は、上のボタンをドラッグして下のボタンも開いてみてください。
+
+[h2]■ 注意事項[/h2]
+[list]
+[*]見た目だけの装飾です。歩行者の動きや交通には影響しません。
+[*]道路を作り直しても、ブロックは自動では消えません。
+[*]モッドを外してもセーブデータは読み込めます（ブロックは表示されなくなります）。
+[*]古いUUIライブラリを使う他のモッドがあると、UUIのパネルが2つできることがあります。その場合でも、両方のパネルにアイコンを追加します。
+[*]UUIに登録できなかったときは、画面左上に予備のボタンが表示されます。
+[/list]
+
+[h2]■ ソースコード[/h2]
+ソースコードはGitHubで公開しています（MITライセンス）。不具合の報告もこちらへどうぞ。
+[url=https://github.com/DC10-8/TactilePaving]https://github.com/DC10-8/TactilePaving[/url]
+
+----------------------------------------
+
+[h2]■ Overview[/h2]
+Lay tactile paving (the yellow textured blocks that guide visually impaired pedestrians) on road sidewalks. Open the tool from a UnifiedUI (UUI) button and click twice on a sidewalk: the blocks follow the curve of the sidewalk. Great for detailing sidewalks, station plazas and crosswalk approaches.
+
+[h2]■ Features[/h2]
+[list]
+[*]2 block types × 2 colors: guide blocks (bars) and warning blocks (dots), in yellow or gray
+[*]1 to 3 rows wide (1 row = 300 mm)
+[*]Follows the curve of the sidewalk automatically
+[*]Nodes: continue a strip from its end, or connect strips together
+[*]Right-click to remove blocks one by one
+[*]Raised bars and dots with real lighting
+[*]Japanese / English, switched instantly in the options
+[*]Placed blocks are stored in your save game
+[/list]
+
+[h2]■ Requirements[/h2]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2255219025]UnifiedUI (UUI)[/url]
+[/list]
+
+[h2]■ How to use[/h2]
+[olist]
+[*]Click the tactile paving button in the UUI panel. The tool turns on and a settings panel appears on the left.
+[*]Choose the block type and the number of rows in the panel.
+[*]Left-click on a sidewalk to set the start point, then left-click again to set the end point. The blocks are laid.
+[*]Light-blue nodes appear at both ends of each strip. Click a node to continue from there, for example to add warning blocks at the end of guide blocks.
+[*]Click the UUI button again to turn the tool off.
+[/olist]
+
+[b]Controls[/b]
+[list]
+[*]Left-click: set the start / end point
+[*]Right-click: cancel while laying, otherwise remove the single block under the cursor (highlighted in red)
+[*]Ctrl+Z: undo the last placed strip
+[/list]
+
+[h2]■ Settings[/h2]
+Change them in the in-game panel or in Options → Mod Settings.
+[list]
+[*]Language: Japanese / English (options screen)
+[*]Block type: bars or dots, yellow or gray
+[*]Rows: 1 to 3
+[/list]
+Type and rows apply to the blocks you lay next.
+
+[h2]■ FAQ[/h2]
+[b]Q. I can't find the button.[/b]
+A. Make sure UUI is enabled. If two UUI round buttons overlap, drag the top one away and open the one underneath as well.
+
+[h2]■ Notes[/h2]
+[list]
+[*]Decoration only: it does not affect pedestrians or traffic.
+[*]Blocks are not removed automatically when you rebuild a road.
+[*]Save games still load after unsubscribing (the blocks are simply not shown).
+[*]If another mod uses an old UUI library, a second UUI panel may appear. The button is added to both panels.
+[*]If the button cannot be added to UUI, a backup button appears at the top left of the screen.
+[/list]
+
+[h2]■ Source code[/h2]
+The source code is available on GitHub under the MIT License. Bug reports are welcome there.
+[url=https://github.com/DC10-8/TactilePaving]https://github.com/DC10-8/TactilePaving[/url]
