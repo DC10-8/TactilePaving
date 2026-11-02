@@ -10,7 +10,7 @@ Lay tactile paving (guide and warning blocks for visually impaired pedestrians) 
 
 - Guide blocks (bars) and warning blocks (dots), yellow or gray / 線状・点状ブロック × 黄色・グレー
 - 1–3 rows wide (1 row = 300 mm) / 1〜3列（1列 = 300mm）
-- Follows the sidewalk curve; nodes to continue or connect strips / 歩道のカーブに沿って敷設、ノードから続きを敷設
+- Follows sidewalk curves and intersection corners; nodes to continue or connect strips / 歩道のカーブや交差点の角に沿って敷設、ノードから続きを敷設
 - Right-click removes blocks one by one; Ctrl+Z undoes the last strip / 右クリックで1枚ずつ削除、Ctrl+Z で取り消し
 - Japanese / English, switched instantly in the options / 日本語・英語をオプション画面で即時切り替え
 - Placed blocks are saved in the save game / 敷設したブロックはセーブデータに保存

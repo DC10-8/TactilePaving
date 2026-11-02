@@ -35,7 +35,7 @@ namespace TactilePaving
     // 敷設済みの点字ブロック一覧。セーブデータへの保存もここで行う
     internal static class TactilePavingData
     {
-        private const int FormatVersion = 2;
+        private const int FormatVersion = 3;
 
         private static readonly List<TactileStrip> StripList = new List<TactileStrip>();
 
@@ -218,8 +218,8 @@ namespace TactilePaving
 
                             if (version >= 2)
                             {
-                                strip.Start = ReadNode(reader);
-                                strip.End = ReadNode(reader);
+                                strip.Start = ReadNode(reader, version);
+                                strip.End = ReadNode(reader, version);
                             }
 
                             if (pointCount >= 2)
@@ -291,15 +291,25 @@ namespace TactilePaving
             writer.Write(node.Lane);
             writer.Write(node.LaneOffset);
             writer.Write(node.Lateral);
+            writer.Write(node.Node);
+            writer.Write(node.CornerLaneA);
+            writer.Write(node.CornerLaneB);
         }
 
-        private static SidewalkPoint ReadNode(BinaryReader reader)
+        private static SidewalkPoint ReadNode(BinaryReader reader, int version)
         {
             SidewalkPoint node = new SidewalkPoint();
             node.Segment = reader.ReadUInt16();
             node.Lane = reader.ReadUInt32();
             node.LaneOffset = reader.ReadSingle();
             node.Lateral = reader.ReadSingle();
+            if (version >= 3)
+            {
+                node.Node = reader.ReadUInt16();
+                node.CornerLaneA = reader.ReadUInt32();
+                node.CornerLaneB = reader.ReadUInt32();
+            }
+
             return node;
         }
 

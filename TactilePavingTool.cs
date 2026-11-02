@@ -217,8 +217,11 @@ namespace TactilePaving
             input.m_ignoreTerrain = true;
             input.m_ignoreSegmentFlags = NetSegment.Flags.None;
 
+            // 交差点の角の歩道は交差点（ノード）側にあるので、ノードにも当てる
+            input.m_ignoreNodeFlags = NetNode.Flags.None;
+
             RaycastOutput output;
-            if (!RayCast(input, out output) || output.m_netSegment == 0)
+            if (!RayCast(input, out output) || (output.m_netSegment == 0 && output.m_netNode == 0))
             {
                 return;
             }
@@ -227,7 +230,7 @@ namespace TactilePaving
             hasRawHit = true;
 
             float width = ModSettings.Rows * TactileBlockTypes.BlockSize;
-            hasHover = TactileGeometry.TryGetSidewalkPoint(output.m_netSegment, output.m_hitPos, width, out hover);
+            hasHover = TactileGeometry.TryGetSidewalkPoint(output.m_netSegment, output.m_netNode, output.m_hitPos, width, out hover);
         }
 
         // 敷設済みブロックの端（ノード）にカーソルが乗っていれば、そこへ吸着させる

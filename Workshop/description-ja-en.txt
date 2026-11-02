@@ -9,7 +9,7 @@
 [list]
 [*]2種類のブロック × 2色：線状ブロック（誘導用）と点状ブロック（警告用）、それぞれ黄色とグレー
 [*]1〜3列の幅（1列 = 300mm）
-[*]歩道のカーブに沿った自動配置
+[*]歩道のカーブや交差点の角に沿った自動配置
 [*]ノード機能：敷設済みの列の端から続きを敷設したり、列どうしをつないだりできます
 [*]右クリックでブロックを1枚ずつ削除
 [*]突起の陰影が出る立体的な見た目
@@ -26,7 +26,7 @@
 [olist]
 [*]UUIのパネルにある点字ブロックのアイコンをクリックすると、ツールがONになり、画面左に設定パネルが表示されます。
 [*]設定パネルで、ブロックの種類と列数を選びます。
-[*]歩道の上を左クリックすると開始地点、もう一度左クリックすると終了地点になり、ブロックが敷設されます。
+[*]歩道の上を左クリックすると開始地点、もう一度左クリックすると終了地点になり、ブロックが敷設されます。交差点の角をはさんだ隣の歩道までなら、角を回り込んで敷設されます。
 [*]列の両端には水色の「ノード」が表示されます。ノードをクリックすると、そこから続きを敷設できます。線状ブロックの先に点状ブロックをつなぐときに便利です。
 [*]もう一度アイコンをクリックするとツールがOFFになります。
 [/olist]
@@ -73,7 +73,7 @@ Lay tactile paving (the yellow textured blocks that guide visually impaired pede
 [list]
 [*]2 block types × 2 colors: guide blocks (bars) and warning blocks (dots), in yellow or gray
 [*]1 to 3 rows wide (1 row = 300 mm)
-[*]Follows the curve of the sidewalk automatically
+[*]Follows sidewalk curves and intersection corners automatically
 [*]Nodes: continue a strip from its end, or connect strips together
 [*]Right-click to remove blocks one by one
 [*]Raised bars and dots with real lighting
@@ -90,7 +90,7 @@ Lay tactile paving (the yellow textured blocks that guide visually impaired pede
 [olist]
 [*]Click the tactile paving button in the UUI panel. The tool turns on and a settings panel appears on the left.
 [*]Choose the block type and the number of rows in the panel.
-[*]Left-click on a sidewalk to set the start point, then left-click again to set the end point. The blocks are laid.
+[*]Left-click on a sidewalk to set the start point, then left-click again to set the end point. The blocks are laid. If the end is on the next sidewalk around an intersection corner, the blocks go around the corner.
 [*]Light-blue nodes appear at both ends of each strip. Click a node to continue from there, for example to add warning blocks at the end of guide blocks.
 [*]Click the UUI button again to turn the tool off.
 [/olist]
