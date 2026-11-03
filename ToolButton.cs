@@ -42,9 +42,12 @@ namespace TactilePaving
         // Start は全モッドの OnLevelLoaded の後に呼ばれるので、UUI の準備が済んでから登録できる
         private void Start()
         {
+            // クラッシュしたときに、どの段階まで進んだかログで分かるようにする
+            Debug.Log("[TactilePaving] ToolButton: creating icon");
             icon = TactileTextures.CreateIcon();
             Localization.Changed += UpdateTooltips;
 
+            Debug.Log("[TactilePaving] ToolButton: registering UUI button");
             uuiButton = RegisterUUIButton();
             if (uuiButton != null)
             {
@@ -54,7 +57,9 @@ namespace TactilePaving
 
             // パネルが後から作られることもあるので、しばらくの間は定期的に探す
             panelScanEnd = Time.realtimeSinceStartup + PanelScanDuration;
+            Debug.Log("[TactilePaving] ToolButton: checking other UUI panels");
             RegisterInOtherPanels();
+            Debug.Log("[TactilePaving] ToolButton: ready");
 
             if (uuiButton == null && extraButtons.Count == 0)
             {
@@ -227,17 +232,8 @@ namespace TactilePaving
 
         private UIComponent RegisterUUIButton()
         {
-            // 新しいUUIは本体 (UnifiedUIMod) と API (UnifiedUILib) が別アイテムに分かれており、
-            // IsUUIEnabled() は false を返す。登録処理自体は読み込み済みの最新 UnifiedUILib を
-            // 使って動くので、ここでは判定に使わずログに残すだけにする
-            try
-            {
-                Debug.Log("[TactilePaving] UUIHelpers.IsUUIEnabled() = " + UUIHelpers.IsUUIEnabled());
-            }
-            catch (Exception e)
-            {
-                Debug.LogWarning("[TactilePaving] UUIの確認に失敗しました: " + e.Message);
-            }
+            // UUIHelpers.IsUUIEnabled() は使わない。新しいUUIでは常に false を返すうえ、
+            // 全モッドの IUserMod を取得するため、まだ作られていない他モッドの初期化処理まで動かしてしまう
 
             // 新しいUUI: テクスチャを直接渡す
             try

@@ -90,6 +90,7 @@ namespace TactilePaving
         public override void Start()
         {
             base.Start();
+            Debug.Log("[TactilePaving] SettingsPanel: building");
 
             name = "TactilePavingSettingsPanel";
             backgroundSprite = "MenuPanel2";

@@ -96,6 +96,7 @@ namespace TactilePaving
 
         private void Rebuild()
         {
+            Debug.Log("[TactilePaving] Renderer: building meshes for " + TactilePavingData.Strips.Count + " strips");
             ClearMeshes();
 
             List<Vector3>[] vertices = new List<Vector3>[meshes.Length];
